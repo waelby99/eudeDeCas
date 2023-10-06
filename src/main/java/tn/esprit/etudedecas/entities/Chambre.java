@@ -3,9 +3,18 @@ import jakarta.persistence.*;
 
 import java.io.Serializable;
 import java.util.Set;
+
+import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
+
 import tn.esprit.etudedecas.entities.Bloc;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@ToString
 @Table(name="Chambre")
 public class Chambre implements Serializable{
     @Id

@@ -1,11 +1,20 @@
 package tn.esprit.etudedecas.entities;
 
 import jakarta.persistence.*;
+import lombok.*;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.*;
+import lombok.Getter;
+import lombok.Setter;
+
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@ToString
 @Table(name="Foyer")
 public class Foyer implements Serializable{
     @Id
