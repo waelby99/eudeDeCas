@@ -3,6 +3,7 @@ package tn.esprit.etudedecas.entities;
 import java.util.Date;
 import jakarta.persistence.*;
 import java.io.Serializable;
+import java.util.Set;
 
 @Entity
 @Table(name="Reservation")
@@ -16,4 +17,6 @@ public class Reservation implements Serializable{
     private Date anneeUniversitaire;
     @Column(name="estValide")
     private boolean estValide;
+    @ManyToMany
+    private Set<Eudiant> eudiants;
 }

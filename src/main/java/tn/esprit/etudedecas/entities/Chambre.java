@@ -2,6 +2,8 @@ package tn.esprit.etudedecas.entities;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.Set;
+import tn.esprit.etudedecas.entities.Bloc;
 
 @Entity
 @Table(name="Chambre")
@@ -15,4 +17,9 @@ public class Chambre implements Serializable{
     @Column(name="typeC")
     @Enumerated(EnumType.STRING)
     private TypeChambre typeC;
+    @OneToMany
+    private Set<Reservation> reservations;
+
+    @ManyToOne
+    private Bloc bloc;
 }

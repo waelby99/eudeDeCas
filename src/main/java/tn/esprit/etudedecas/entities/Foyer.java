@@ -3,6 +3,8 @@ package tn.esprit.etudedecas.entities;
 import jakarta.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.*;
+
 @Entity
 @Table(name="Foyer")
 public class Foyer implements Serializable{
@@ -14,4 +16,11 @@ public class Foyer implements Serializable{
     private String nomFoyer;
     @Column(name="capaciteFoyer")
     private long capaciteFoyer;
+    @OneToOne(mappedBy = "foyer")
+    private Universite universite;
+
+    @OneToMany(mappedBy = "foyer")
+    private Set<Bloc> blocs;
+
+
 }

@@ -2,7 +2,7 @@ package tn.esprit.etudedecas.entities;
 
 import jakarta.persistence.*;
 import java.io.Serializable;
-import java.util.Date;
+import java.util.*;
 @Entity
 @Table(name="Eudiant")
 public class Eudiant implements Serializable {
@@ -21,4 +21,7 @@ public class Eudiant implements Serializable {
     @Column(name="dateNaissance")
     @Temporal (TemporalType.DATE)
     private Date dateNaissance;
+
+    @ManyToMany(mappedBy = "eudiants")
+    private Set<Reservation> reservations;
 }

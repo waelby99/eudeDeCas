@@ -15,4 +15,6 @@ public class Universite implements Serializable{
     private String nomUniversite;
     @Column(name="adresse")
     private String adresse;
+    @OneToOne
+    private Foyer foyer;
 }
