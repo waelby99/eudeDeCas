@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.DynamicUpdate;
 
 
 import java.io.Serializable;
@@ -13,6 +14,7 @@ import java.util.*;
 @Setter
 @NoArgsConstructor
 @ToString
+@DynamicUpdate
 @Table(name="Eudiant")
 public class Eudiant implements Serializable {
     @Id
