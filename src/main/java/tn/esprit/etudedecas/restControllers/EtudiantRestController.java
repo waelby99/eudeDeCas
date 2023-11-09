@@ -18,7 +18,7 @@ public class EtudiantRestController {
     public Eudiant addEtudiant(@RequestBody Eudiant e){
         return iEtudiantService.addEudiant(e);
     }
-    @PutMapping("/modifierEtudiant/{idE}")
+    @PutMapping("/modifierEtudiant")
     public Eudiant updateEtudiant(@RequestBody Eudiant e){
         return iEtudiantService.updateEudiant(e);
     }

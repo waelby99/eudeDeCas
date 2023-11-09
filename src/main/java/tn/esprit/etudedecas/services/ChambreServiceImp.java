@@ -1,12 +1,9 @@
 package tn.esprit.etudedecas.services;
 
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tn.esprit.etudedecas.entities.Chambre;
-import tn.esprit.etudedecas.entities.Eudiant;
 import tn.esprit.etudedecas.repositories.ChambreRepository;
-import tn.esprit.etudedecas.repositories.EtudiantRepository;
 
 import java.util.List;
 
