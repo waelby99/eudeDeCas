@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import tn.esprit.etudedecas.entities.Bloc;
 import tn.esprit.etudedecas.repositories.BlocRepository;
-import tn.esprit.etudedecas.repositories.ChambreRepository;
 
 import java.util.List;
 
