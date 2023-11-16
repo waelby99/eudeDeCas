@@ -1,6 +1,8 @@
 package tn.esprit.etudedecas.entities;
 
 import java.util.Date;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,5 +27,6 @@ public class Universite implements Serializable{
     @Column(name="adresse")
     private String adresse;
     @OneToOne
+    @JsonIgnore
     private Foyer foyer;
 }

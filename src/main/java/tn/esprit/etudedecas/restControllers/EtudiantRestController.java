@@ -3,10 +3,12 @@ package tn.esprit.etudedecas.restControllers;
 import lombok.AllArgsConstructor;
 import org.hibernate.annotations.DynamicUpdate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.etudedecas.entities.Eudiant;
 import tn.esprit.etudedecas.services.IEtudiantService;
 
+import java.util.Date;
 import java.util.List;
 @RestController
 @AllArgsConstructor
@@ -33,6 +35,11 @@ public class EtudiantRestController {
     @DeleteMapping("/supprimerEtudiant/{idE}")
     public void deleteEtudiant(@PathVariable long idE){
         iEtudiantService.deleteEudiant(idE);
+    }
+
+    @GetMapping("/getByDate/{dateDebut}/{dateFin}")
+    public List<Eudiant> getEtudiantByDateNaissance(@PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date dateDebut , @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date dateFin){
+        return iEtudiantService.findByDateNaissanceBetween(dateDebut,dateFin);
     }
 
 }

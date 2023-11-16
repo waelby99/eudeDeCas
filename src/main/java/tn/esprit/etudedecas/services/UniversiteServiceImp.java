@@ -37,4 +37,8 @@ public class UniversiteServiceImp implements IUniversiteService{
     public void deleteUniversite(long idU) {
         universiteRepository.deleteById(idU);
     }
+    @Override
+    public Universite getUniversiteByFoyer(String nomFoyer) {
+        return universiteRepository.findByFoyerNomFoyer(nomFoyer);
+    }
 }

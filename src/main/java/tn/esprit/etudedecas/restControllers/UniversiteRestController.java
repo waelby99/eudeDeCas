@@ -36,4 +36,9 @@ public class UniversiteRestController {
         iUniversiteService.deleteUniversite(idU);
     }
 
+    @GetMapping("/getUnByFoyer/{nomFoyer}")
+    public Universite getUniversiteByFoyer(@PathVariable String nomFoyer){
+        return iUniversiteService.getUniversiteByFoyer(nomFoyer);
+    }
+
 }
