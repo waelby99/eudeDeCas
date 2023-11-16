@@ -1,5 +1,6 @@
 package tn.esprit.etudedecas.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.Getter;
@@ -34,5 +35,6 @@ public class Eudiant implements Serializable {
     private Date dateNaissance;
 
     @ManyToMany(mappedBy = "eudiants")
+    @JsonIgnore
     private Set<Reservation> reservations;
 }

@@ -6,6 +6,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -29,4 +30,5 @@ public class Bloc implements Serializable {
 
     @OneToMany(mappedBy = "bloc")
     private Set<Chambre> chambres;
+
 }

@@ -36,4 +36,9 @@ public class ChambreRestController {
     public void deleteChambre(@PathVariable long idC){
         iChambreService.deleteChambre(idC);
     }
+
+    @GetMapping("/getChambreBloc/{idB}")
+    public List<Chambre> findByBloc(@PathVariable long idB){
+        return iChambreService.findByBloc_IdBloc(idB);
+    }
 }

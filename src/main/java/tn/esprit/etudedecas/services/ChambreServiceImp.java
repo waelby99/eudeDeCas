@@ -32,4 +32,8 @@ public class ChambreServiceImp implements IChambreService{
 
     @Override
     public void deleteChambre(long idC) { chambreRepository.deleteById(idC); }
+
+    @Override
+    public List<Chambre> findByBloc_IdBloc(long idB) { return chambreRepository.findByBloc_IdBloc(idB); }
 }
+

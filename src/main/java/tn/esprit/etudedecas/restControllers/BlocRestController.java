@@ -2,10 +2,14 @@ package tn.esprit.etudedecas.restControllers;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.RestController;
+import tn.esprit.etudedecas.entities.Chambre;
+import tn.esprit.etudedecas.repositories.BlocRepository;
 import tn.esprit.etudedecas.services.IBlocService;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.etudedecas.entities.Bloc;
 import java.util.List;
+import java.util.Set;
+
 @RestController
 @AllArgsConstructor
 public class BlocRestController {
@@ -36,4 +40,10 @@ public class BlocRestController {
     public void deleteBloc(@PathVariable long idB){
         iBlocService.deleteBloc(idB);
     }
+
+    @GetMapping("/getBlocduChambre/{idC}")
+    public Bloc findByChambres_IdBloc(@PathVariable long idC){
+        return iBlocService.findBlocByChambreId(idC);
+    }
+
 }

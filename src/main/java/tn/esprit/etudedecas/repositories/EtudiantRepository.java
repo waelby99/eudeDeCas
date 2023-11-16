@@ -8,6 +8,5 @@ import java.util.List;
 
 public interface EtudiantRepository extends JpaRepository<Eudiant,Long> {
     public List<Eudiant> findByNomEt(String nom);
-
     public List<Eudiant> findByDateNaissanceBetween(Date dateDebut, Date dateFin);
 }

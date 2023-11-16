@@ -10,4 +10,5 @@ public interface IChambreService {
     public List<Chambre> getAllChambre();
     public Chambre getChambreById(long idC);
     public void deleteChambre(long idC);
+    public List<Chambre> findByBloc_IdBloc(long idB);
 }

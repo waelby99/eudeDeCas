@@ -10,4 +10,7 @@ public interface IReservationService {
     public List<Reservation> getAllReservations();
         public Reservation getReservationById(String idR);
     public void deleteReservation(String idR);
+    public List<Reservation> findReservationsByStudentId(long studentId);
+    public List<Reservation> findReservationsByStudentName(String nom);
+    public List<Reservation> findReservationsByStudentNameStartingWithAB();
 }
