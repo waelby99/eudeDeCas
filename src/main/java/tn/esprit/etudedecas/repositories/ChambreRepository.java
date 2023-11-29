@@ -10,6 +10,4 @@ public interface ChambreRepository extends JpaRepository<Chambre,Long> {
 
     public List<Chambre> findByBloc_IdBloc(long idB);
 
-
-
 }
